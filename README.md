@@ -1,5 +1,7 @@
 # advent-of-code-2021-kotlin
 
+<!--- advent_readme_stars table --->
+
 Welcome to the Advent of Code[^aoc] Kotlin project created by [bloep][github] using the [Advent of Code Kotlin Template][template] delivered by JetBrains.
 
 In this repository, bloep is about to provide solutions for the puzzles using [Kotlin][kotlin] language.

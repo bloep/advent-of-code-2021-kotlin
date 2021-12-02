@@ -1,0 +1,17 @@
+name: Update AoC Badges
+on:
+  schedule:                                      # run workflow based on schedule
+    - cron: '0 2 1-25 12 *'                      # from the 1. December till 25. December every day at 5:06am (avoid load at full hours)
+  workflow_dispatch:                             # allow to manually start the workflow
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: k2bd/advent-readme-stars@v1
+        with:
+          userId: 1068845
+          sessionCookie: ${{ secrets.AOC_SESSION }}
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update README stars
